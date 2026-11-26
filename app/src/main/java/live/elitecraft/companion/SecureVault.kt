@@ -1,17 +1,21 @@
 package live.elitecraft.companion
 
 import android.content.Context
+import android.content.SharedPreferences
 import androidx.security.crypto.EncryptedSharedPreferences
 import androidx.security.crypto.MasterKey
 
+@Suppress("DEPRECATION")
 class SecureVault(ctx: Context) {
-    private val prefs by lazy {
-        val mk = MasterKey.Builder(ctx).setKeyScheme(MasterKey.KeyScheme.AES256_GCM).build()
+    private val prefs: SharedPreferences by lazy {
+        val mk = MasterKey.Builder(ctx)
+            .setKeyScheme(MasterKey.KeyScheme.AES256_GCM)
+            .build()
         EncryptedSharedPreferences.create(
             ctx,
             "gmate_companion_vault",
             mk,
-            EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_GCM,
+            EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
             EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
         )
     }
