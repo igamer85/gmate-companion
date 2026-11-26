@@ -15,6 +15,11 @@ jobs:
           distribution: temurin
           java-version: "17"
       - uses: android-actions/setup-android@v3
+        with:
+          api-level: 35
+          build-tools: 35.0.0
+          packages: platform-tools platforms;android-35 build-tools;35.0.0
+      - uses: gradle/actions/setup-gradle@v4
       - name: Decode Release Keystore (if secret provided)
         env:
           KS_B64: ${{ secrets.GMATE_KEYSTORE_BASE64 }}
