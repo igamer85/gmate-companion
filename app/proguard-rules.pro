@@ -1,2 +1,5 @@
 -keep class live.elitecraft.companion.** { *; }
 -dontwarn okhttp3.**
+-dontwarn com.google.errorprone.annotations.**
+-dontwarn javax.annotation.**
+-keep class live.elitecraft.companion.** { *; }
