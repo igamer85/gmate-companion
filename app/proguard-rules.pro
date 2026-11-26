@@ -1,0 +1,2 @@
+-keep class live.elitecraft.companion.** { *; }
+-dontwarn okhttp3.**

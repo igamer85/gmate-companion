@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0B0F19"
+    android:padding="18dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gap="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="gMate Companion"
+            android:textColor="#F5B942"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Signed out • Mic inactive"
+            android:textColor="#94A3B8"
+            android:textSize="13sp" />
+
+        <!-- Login Box -->
+        <LinearLayout
+            android:id="@+id/boxLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="#141B2D"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <EditText
+                android:id="@+id/etUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Minecraft Username"
+                android:inputType="text"
+                android:maxLength="16"
+                android:textColor="#EEF2FF"
+                android:textColorHint="#64748B" />
+
+            <EditText
+                android:id="@+id/etPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="gMate Password"
+                android:inputType="textPassword"
+                android:maxLength="48"
+                android:textColor="#EEF2FF"
+                android:textColorHint="#64748B" />
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#F59E0B"
+                android:text="LOGIN"
+                android:textColor="#111111"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Active Session Box -->
+        <LinearLayout
+            android:id="@+id/boxActive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="#141B2D"
+            android:orientation="vertical"
+            android:padding="14dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Account: -"
+                android:textColor="#EEF2FF"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvLinkStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Minecraft Link: Not linked"
+                android:textColor="#94A3B8"
+                android:textSize="12.5sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnGenCode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Link Code"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnUnlink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Unlink"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvCodeOut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text=""
+                android:textColor="#38BDF8"
+                android:textIsSelectable="true"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/cbAllowUnmute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:checked="true"
+                android:text="Allow in-game /vc unmute while VC is active"
+                android:textColor="#CBD5E1"
+                android:textSize="12.5sp" />
+
+            <EditText
+                android:id="@+id/etSquad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-"
+                android:hint="Squad Code (e.g. EC-4K9A)"
+                android:maxLength="12"
+                android:textColor="#EEF2FF"
+                android:textColorHint="#64748B" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnStartSquad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#22C55E"
+                    android:text="Squad VC"
+                    android:textColor="#0B0F19"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnStartGuild"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#38BDF8"
+                    android:text="Guild VC"
+                    android:textColor="#0B0F19"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnStopVc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:backgroundTint="#EF4444"
+                    android:text="Stop"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnMute"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Mic: ON" />
+
+                <Button
+                    android:id="@+id/btnDeafen"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:text="Audio: ON" />
+
+                <Button
+                    android:id="@+id/btnLogout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Logout" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

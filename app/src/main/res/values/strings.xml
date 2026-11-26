@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">gMate VC</string>
+    <string name="vc_channel_id">gmate_vc_live</string>
+    <string name="vc_channel_name">gMate Background Voice Chat</string>
+</resources>
